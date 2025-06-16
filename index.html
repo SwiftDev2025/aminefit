@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AmineStyle Fit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <button class="lang-toggle" onclick="toggleLang()">AR</button>
+  <header id="appTitle">AmineStyle Fit</header>
+
+  <div id="home" class="tab active">
+    <h2 data-en="Welcome back, Amine!" data-ar="مرحبا بك مجدداً يا أمين!">Welcome back, Amine!</h2>
+    <p data-en="Your current weight: 52 kg" data-ar="وزنك الحالي: 52 كغ">Your current weight: 52 kg</p>
+    <p data-en="Target: 70 kg 💪" data-ar="الهدف: 70 كغ 💪">Target: 70 kg 💪</p>
+    <p data-en="Let's crush this journey together!" data-ar="يلا نحطمو هاد الرحلة سوا!">Let's crush this journey together!</p>
+  </div>
+
+  <div id="nutrition" class="tab">
+    <h2 data-en="Nutrition Plan" data-ar="خطة التغذية">Nutrition Plan</h2>
+    <ul>
+      <li data-en="08:00 - Breakfast" data-ar="08:00 - فطور">08:00 - Breakfast</li>
+      <li data-en="11:00 - Snack" data-ar="11:00 - سناك">11:00 - Snack</li>
+      <li data-en="14:00 - Lunch" data-ar="14:00 - غداء">14:00 - Lunch</li>
+      <li data-en="17:00 - Snack" data-ar="17:00 - سناك">17:00 - Snack</li>
+      <li data-en="20:30 - Post Workout" data-ar="20:30 - بعد التمرين">20:30 - Post Workout</li>
+      <li data-en="23:00 - Before Sleep" data-ar="23:00 - قبل النوم">23:00 - Before Sleep</li>
+    </ul>
+  </div>
+
+  <div id="workouts" class="tab">
+    <h2 data-en="Workout Routine" data-ar="برنامج التمارين">Workout Routine</h2>
+    <ul>
+      <li data-en="Chest + Triceps" data-ar="صدر + ترايسبس">Chest + Triceps</li>
+      <li data-en="Back + Biceps" data-ar="ظهر + بايسبس">Back + Biceps</li>
+      <li data-en="Legs + Abs" data-ar="أرجل + بطن">Legs + Abs</li>
+      <li data-en="Shoulders + Cardio" data-ar="أكتاف + كارديو">Shoulders + Cardio</li>
+    </ul>
+  </div>
+
+  <nav>
+    <button onclick="showTab('home', this)" class="active">🏠</button>
+    <button onclick="showTab('nutrition', this)">🍽️</button>
+    <button onclick="showTab('workouts', this)">🏋️</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
