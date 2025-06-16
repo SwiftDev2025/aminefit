@@ -7,6 +7,25 @@ function showTab(id, btn) {
 }
 
 function toggleLang() {
+  function scheduleMealReminder(time, message) {
+  const now = new Date();
+  const mealTime = new Date();
+  const [hours, minutes] = time.split(':');
+  mealTime.setHours(hours, minutes, 0, 0);
+
+  if (mealTime > now) {
+    const delay = mealTime.getTime() - now.getTime();
+    setTimeout(() => {
+      alert(message); // تقدر تبدلها بـ Notification API
+    }, delay);
+  }
+}
+
+// مثال: استدعاء تنبيهات
+scheduleMealReminder("08:00", "⏰ Time for Breakfast!");
+scheduleMealReminder("14:00", "⏰ Time for Lunch!");
+scheduleMealReminder("20:30", "⏰ Time for Post Workout Meal!");
+
   const toggle = document.querySelector('.lang-toggle');
   const lang = toggle.innerText === 'AR' ? 'ar' : 'en';
   toggle.innerText = lang.toUpperCase() === 'EN' ? 'AR' : 'EN';
